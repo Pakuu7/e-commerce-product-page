@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>E-commerce product page</title>
+		<link rel="stylesheet" href="dist/css/style.min.css" />
+		<script src="https://kit.fontawesome.com/336bb66908.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__content">
+				<div class="nav__logo-container">
+					<img src="dist/img/logo.svg" alt="Logo" />
+				</div>
+				<div class="nav__links">
+					<ul class="nav__list">
+						<li class="nav__item">Collections</li>
+						<li class="nav__item">Men</li>
+						<li class="nav__item">Woman</li>
+						<li class="nav__item">About</li>
+						<li class="nav__item">Contact</li>
+					</ul>
+				</div>
+				<div class="nav__options">
+					<div class="nav__cart">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</div>
+					<div class="nav__avatar">
+						<img src="dist/img/avatar.jpg" alt="Avatar" />
+					</div>
+				</div>
+			</div>
+		</nav>
+		<main class="main">
+			<div class="main__gallery">
+				<div class="main__photo main__photo--main">
+					<img src="dist/img/AirForce-1.png" alt="Side view of Air Force 1 shoe" />
+				</div>
+				<div class="main__photo main__photo--thumbnail">
+					<img src="dist/img/AirForce-1.png" alt="Side view of Air Force 1 shoe" />
+					<img src="dist/img/AirForce-2.png" alt="Top view of Air Force 1 shoe" />
+					<img src="dist/img/AirForce-3.png" alt="Back view of Air Force 1 shoe" />
+					<img src="dist/img/AirForce-4.png" alt="Bottom view of Air Force 1 shoe" />
+				</div>
+			</div>
+			<div class="product-details">
+				<div class="product-details__content">
+					<p class="product-details__brand">Sneaker company</p>
+					<h1 class="product-details__title">Air Force 1 Edition Sneakers</h1>
+					<p class="product-details__description">
+						These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+						they’ll withstand everything the weather can offer.
+					</p>
+					<div class="product-details__price">
+						<span class="product-details__current-price">$125.00</span>
+						<span class="product-details__discount">50%</span>
+						<span class="product-details__old-price">$250.00</span>
+					</div>
+				</div>
+				<div class="product-details__cart">
+					<div class="product-details__quantity">
+						<button class="product-details__quantity-btn product-details__quantity-btn--decrease">
+							<i class="fa-solid fa-minus"></i>
+						</button>
+						<span class="product-details__quantity-value">0</span>
+						<button class="product-details__quantity-btn product-details__quantity-btn--increase">
+							<i class="fa-solid fa-plus"></i>
+						</button>
+					</div>
+					<button class="product-details__add-to-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+				</div>
+			</div>
+		</main>
+
+		<script src="/dist/js/main.min.js"></script>
+	</body>
+</html>
