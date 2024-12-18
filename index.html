@@ -5,34 +5,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>E-commerce product page</title>
 		<link rel="stylesheet" href="dist/css/style.min.css" />
+		<link rel="stylesheet" href="dist/css/hamburgers.css">
 		<script src="https://kit.fontawesome.com/336bb66908.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<nav class="nav">
 			<div class="nav__content">
-				<div class="nav__logo-container">
-					<img src="dist/img/logo.svg" alt="Logo" />
-				</div>
-				<div class="nav__links">
-					<ul class="nav__list">
-						<li class="nav__item">Collections</li>
-						<li class="nav__item">Men</li>
-						<li class="nav__item">Woman</li>
-						<li class="nav__item">About</li>
-						<li class="nav__item">Contact</li>
-					</ul>
+				<div class="nav__left-side">
+					<div class="nav__links">
+						<ul class="nav__list">
+							<div class="nav__hamburger">
+								<button class="hamburger hamburger--slider" type="button">
+									<span class="hamburger-box">
+										<span class="hamburger-inner"></span>
+									</span>
+								</button>
+							</div>
+							<div class="nav__items">
+								<li class="nav__item">Collections</li>
+								<li class="nav__item">Men</li>
+								<li class="nav__item">Woman</li>
+								<li class="nav__item">About</li>
+								<li class="nav__item">Contact</li>
+							</div>
+						</ul>
+					</div>
+					<div class="nav__logo-container">
+						<img src="dist/img/logo.svg" alt="Logo" />
+					</div>
 				</div>
 				<div class="nav__options">
-					<div class="nav__cart">
-						<i class="fa-solid fa-cart-shopping"></i>
-					</div>
-					<div class="nav__avatar">
-						<img src="dist/img/avatar.jpg" alt="Avatar" />
+					<div class="nav__right-side">
+						<div class="nav__cart">
+							<i class="fa-solid fa-cart-shopping"></i>
+						</div>
+						<div class="nav__avatar">
+							<img src="dist/img/avatar.jpg" alt="Avatar" />
+						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
-		<main class="main">
+		<!-- <main class="main">
 			<div class="main__gallery">
 				<div class="main__photo main__photo--main">
 					<img src="dist/img/AirForce-1.png" alt="Side view of Air Force 1 shoe" />
@@ -71,7 +85,7 @@
 					<button class="product-details__add-to-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
 				</div>
 			</div>
-		</main>
+		</main> -->
 
 		<script src="/dist/js/main.min.js"></script>
 	</body>
