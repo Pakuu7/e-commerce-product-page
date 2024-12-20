@@ -1,4 +1,5 @@
-const hamburgerBtn = document.querySelector('.hamburger')
+const hamburgerNormalBtn = document.querySelector('.hamburger-normal')
+const hamburgerActiveBtn = document.querySelector('.hamburger-active')
 const menu = document.querySelector('.nav__items')
 const sliderContainer = document.querySelector('.main__slider-container')
 const nextBtn = document.querySelector('.main__slider-btn--next')
@@ -13,7 +14,6 @@ let productAmountValue = 0
 
 function productAmount(productAmountValue) {
 	quantityValue.value = productAmountValue
-    console.log(quantityValue.value);
 }
 quantityValue.addEventListener('input', function(e) {
     if(e.target.value >= 100) {
@@ -66,8 +66,12 @@ prevBtn.addEventListener('click', () => {
 })
 
 function activeMobileMenu() {
-	hamburgerBtn.classList.toggle('is-active')
-	menu.classList.toggle('active')
+	menu.classList.add('active')
 }
 
-hamburgerBtn.addEventListener('click', activeMobileMenu)
+function closeMobileMenu() {
+    menu.classList.remove('active')
+}
+
+hamburgerNormalBtn.addEventListener('click', activeMobileMenu)
+hamburgerActiveBtn.addEventListener('click', closeMobileMenu)
