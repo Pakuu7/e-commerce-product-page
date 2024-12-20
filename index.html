@@ -14,104 +14,108 @@
 		<script src="https://kit.fontawesome.com/336bb66908.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<nav class="nav">
-			<div class="nav__content">
-				<div class="nav__left-side">
-					<div class="nav__links">
-						<ul class="nav__list">
-							<div class="nav__hamburger">
-								<button class="hamburger hamburger-normal" type="button">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
+		<div class="wrapper">
+			<nav class="nav">
+				<div class="nav__content">
+					<div class="nav__left-side">
+						<div class="nav__links">
+							<ul class="nav__list">
+								<div class="nav__hamburger">
+									<button class="hamburger hamburger-normal" type="button">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+								</div>
+								<div class="nav__items">
+									<button class="hamburger hamburger-active hamburger--slider is-active" type="button">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+									<li class="nav__item">Collections</li>
+									<li class="nav__item">Men</li>
+									<li class="nav__item">Woman</li>
+									<li class="nav__item">About</li>
+									<li class="nav__item">Contact</li>
+								</div>
+							</ul>
+						</div>
+						<div class="nav__logo">
+							<img src="dist/img/logo.svg" alt="Logo" />
+						</div>
+					</div>
+					<div class="nav__options">
+						<div class="nav__right-side">
+							<div class="nav__cart">
+								<i class="nav__cart-icon fa-solid fa-cart-shopping"></i>
 							</div>
-							<div class="nav__items">
-								<button class="hamburger hamburger-active hamburger--slider is-active" type="button">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
-								<li class="nav__item">Collections</li>
-								<li class="nav__item">Men</li>
-								<li class="nav__item">Woman</li>
-								<li class="nav__item">About</li>
-								<li class="nav__item">Contact</li>
+							<div class="nav__cart-list">
+								<div class="nav__cart-list-header">
+									<p class="nav__cart-list-header-title">Cart</p>
+									<i class="nav__cart-list-header-icon fa-solid fa-xmark"></i>
+								</div>
+								<div class="nav__cart-list-product">
+									<p class="nav__cart-list-product-info">Your cart is empty</p>
+								</div>
 							</div>
-						</ul>
-					</div>
-					<div class="nav__logo">
-						<img src="dist/img/logo.svg" alt="Logo" />
-					</div>
-				</div>
-				<div class="nav__options">
-					<div class="nav__right-side">
-						<div class="nav__cart">
-							<i class="nav__cart-icon fa-solid fa-cart-shopping"></i>
-						</div>
-						<div class="nav__cart-list">
-							<div class="nav__cart-list-header">
-								<p class="nav__cart-list-header-title">Cart</p>
-								<i class="nav__cart-list-header-icon fa-solid fa-xmark"></i>
-							</div>
-							<div class="nav__cart-list-product">
-								<p class="nav__cart-list-product-info">Your cart is empty</p>
+							<div class="nav__avatar-container">
+								<img src="dist/img/avatar.jpg" class="nav__avatar" alt="Avatar" />
 							</div>
 						</div>
-						<div class="nav__avatar-container">
-							<img src="dist/img/avatar.jpg" class="nav__avatar" alt="Avatar" />
+					</div>
+				</div>
+			</nav>
+			<main class="main">
+				<div class="main__container">
+					<div class="main__gallery">
+						<div class="main__slider">
+							<div class="main__slider-container">
+								<img src="dist/img/AirForce-1.png" class="main__slider-image" alt="Side view of Air Force 1 shoe" />
+								<img src="dist/img/AirForce-2.png" class="main__slider-image" alt="Top view of Air Force 1 shoe" />
+								<img src="dist/img/AirForce-3.png" class="main__slider-image" alt="Back view of Air Force 1 shoe" />
+								<img src="dist/img/AirForce-4.png" class="main__slider-image" alt="Bottom view of Air Force 1 shoe" />
+							</div>
+							<button class="main__slider-btn main__slider-btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
+							<button class="main__slider-btn main__slider-btn--next"><i class="fa-solid fa-chevron-right"></i></button>
+						</div>
+					</div>
+					<div class="product-details">
+						<div class="product-details__content">
+							<p class="product-details__brand">Sneaker company</p>
+							<h1 class="product-details__title">Air Force 1 Edition Sneakers</h1>
+							<p class="product-details__description">
+								These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+								they’ll withstand everything the weather can offer.
+							</p>
+							<div class="product-details__price">
+								<div class="product-details__current-price-container">
+									<span class="product-details__current-price">$125.00</span>
+									<span class="product-details__discount">50%</span>
+								</div>
+								<div class="product-details__old-price-container">
+									<span class="product-details__old-price">$250.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="product-details__cart">
+							<div class="product-details__quantity">
+								<div class="product-details__quantity-value-container">
+									<button class="product-details__quantity-btn product-details__quantity-btn--decrease">
+										<i class="fa-solid fa-minus"></i>
+									</button>
+									<input type="number" class="product-details__quantity-value" value="" placeholder="0" />
+									<button class="product-details__quantity-btn product-details__quantity-btn--increase">
+										<i class="fa-solid fa-plus"></i>
+									</button>
+								</div>
+							</div>
+							<button class="product-details__add-to-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
 						</div>
 					</div>
 				</div>
-			</div>
-		</nav>
-		<main class="main">
-			<div class="main__gallery">
-				<div class="main__slider">
-					<div class="main__slider-container">
-						<img src="dist/img/AirForce-1.png" class="main__slider-image" alt="Side view of Air Force 1 shoe" />
-						<img src="dist/img/AirForce-2.png" class="main__slider-image" alt="Top view of Air Force 1 shoe" />
-						<img src="dist/img/AirForce-3.png" class="main__slider-image" alt="Back view of Air Force 1 shoe" />
-						<img src="dist/img/AirForce-4.png" class="main__slider-image" alt="Bottom view of Air Force 1 shoe" />
-					</div>
-					<button class="main__slider-btn main__slider-btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
-					<button class="main__slider-btn main__slider-btn--next"><i class="fa-solid fa-chevron-right"></i></button>
-				</div>
-			</div>
-			<div class="product-details">
-				<div class="product-details__content">
-					<p class="product-details__brand">Sneaker company</p>
-					<h1 class="product-details__title">Air Force 1 Edition Sneakers</h1>
-					<p class="product-details__description">
-						These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
-						they’ll withstand everything the weather can offer.
-					</p>
-					<div class="product-details__price">
-						<div class="product-details__current-price-container">
-							<span class="product-details__current-price">$125.00</span>
-							<span class="product-details__discount">50%</span>
-						</div>
-						<div class="product-details__old-price-container">
-							<span class="product-details__old-price">$250.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="product-details__cart">
-					<div class="product-details__quantity">
-						<div class="product-details__quantity-value-container">
-							<input type="number" class="product-details__quantity-value" value="" placeholder="0" />
-							<button class="product-details__quantity-btn product-details__quantity-btn--decrease">
-								<i class="fa-solid fa-minus"></i>
-							</button>
-							<button class="product-details__quantity-btn product-details__quantity-btn--increase">
-								<i class="fa-solid fa-plus"></i>
-							</button>
-						</div>
-					</div>
-					<button class="product-details__add-to-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
-				</div>
-			</div>
-		</main>
+			</main>
+		</div>
 
 		<script src="/dist/js/main.min.js"></script>
 	</body>
