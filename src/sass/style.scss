@@ -7,7 +7,7 @@
 
 html {
 	font-size: 62.5%;
-	font-family: "Montserrat", serif;
+	font-family: 'Montserrat', serif;
 }
 
 :root {
@@ -18,6 +18,10 @@ body {
 	.nav {
 		.active {
 			left: 0;
+		}
+
+		.active-cart {
+			visibility: visible;
 		}
 
 		&__content {
@@ -57,7 +61,7 @@ body {
 		}
 
 		&__item {
-			padding: .6em;
+			padding: 0.6em;
 			font-size: 2rem;
 			list-style: none;
 			cursor: pointer;
@@ -67,22 +71,105 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			position: relative;
 		}
 
 		&__cart {
 			margin-right: 0.4em;
+		}
 
-			i {
-				font-size: 16px;
+		&__cart-icon {
+			font-size: 2.8rem;
+			cursor: pointer;
+		}
+
+		&__cart-list {
+			visibility: hidden;
+			position: absolute;
+			top: 100%;
+			left: -220px;
+			z-index: 1000;
+			box-shadow: 0 20px 50px -20px #1d201c80, 0 22px 18px #1d201c06, 0 100px 80px #1d201c0a;
+			width: 300px;
+			border-radius: 8px;
+		}
+
+		&__cart-list-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.6em 2em;
+			border-bottom: 1px solid rgb(216, 216, 216);
+		}
+
+		&__cart-list-header-title {
+			font-size: 1.6rem;
+			font-weight: 600;
+		}
+
+		&__cart-list-header-icon {
+			font-size: 2.6rem;
+			padding: 0.4em;
+			cursor: pointer;
+			transition: color .3s;
+
+			&:hover {
+				color: var(--orange-main);
 			}
 		}
 
-		&__avatar {
+		&__cart-list-product {
+			padding: 0.6em 2em;
+			height: 220px;
+		}
+
+		&__cart-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__cart-item-info {
+			font-size: 1.4rem;
+			padding-left: 1em;
+		}
+
+		&__cart-item-icon {
+			font-size: 2rem;
+		}
+
+		&__cart-item-img {
+			width: 70px;
+			height: 70px;
+		}
+
+		&__cart-list-product-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			font-size: 1.6rem;
+			font-weight: 600;
+		}
+
+		&__cart-item-price-sum {
+			font-weight: bold;
+		}
+
+		&__avatar-container {
 			padding: 1.5em;
-			img {
-				width: 30px;
-				height: 30px;
-				border-radius: 50%;
+		}
+
+		&__avatar {
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+
+		@media (min-width: 768px) {
+			&__cart-list {
+				left: -280px;
 			}
 		}
 	}
@@ -91,16 +178,15 @@ body {
 		&__slider {
 			position: relative;
 			width: 100%;
-			
+
 			overflow: hidden;
 		}
 
 		&__slider-container {
 			display: flex;
 			transition: transform 0.5s ease-in-out;
-			
 		}
-		
+
 		&__slider-image {
 			min-width: 100%;
 			height: auto;
@@ -137,30 +223,31 @@ body {
 			&__brand {
 				font-size: 2rem;
 				letter-spacing: 2px;
-				margin: 1em 0 .2em 0;
+				margin: 1em 0 0.2em 0;
 			}
-			
+
 			&__title {
 				font-size: 2.8rem;
-				margin: .4em 0;
+				margin: 0.4em 0;
 			}
-			
+
 			&__description {
-				margin: .4em 0;
+				margin: 0.4em 0;
 				font-size: 1.6rem;
 			}
-			
+
 			&__current-price {
 				font-size: 3rem;
 				font-weight: bold;
 			}
 
-			&__current-price-container, &__old-price-container {
+			&__current-price-container,
+			&__old-price-container {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			}
-			
+
 			&__price {
 				display: flex;
 				justify-content: space-between;
@@ -171,10 +258,10 @@ body {
 				background-color: black;
 				color: white;
 				font-weight: bold;
-				margin-left: .6em;
+				margin-left: 0.6em;
 				font-size: 1.8rem;
 				border-radius: 8px;
-				padding: .4em .8em;
+				padding: 0.4em 0.8em;
 			}
 
 			&__old-price {
@@ -224,7 +311,7 @@ body {
 				width: 100%;
 				display: flex;
 				align-items: center;
-				margin: 3em .5em 1em .5em;
+				margin: 3em 0.5em 1em 0.5em;
 			}
 
 			&__quantity-value {
@@ -232,7 +319,7 @@ body {
 				text-align: center;
 				background-color: rgb(233, 233, 233);
 				width: 100%;
-				padding: 1em .5em;
+				padding: 1em 0.5em;
 				border-radius: 12px;
 				font-size: 2rem;
 
@@ -251,9 +338,9 @@ body {
 				background-color: var(--orange-main);
 				border-radius: 12px;
 				cursor: pointer;
-				
+
 				i {
-					margin-right: .6em;
+					margin-right: 0.6em;
 				}
 			}
 		}
