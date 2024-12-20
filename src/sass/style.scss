@@ -41,11 +41,10 @@ body {
 			align-items: center;
 		}
 
-		&__list {
+		&__list-mobile {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-direction: column;
 		}
 
 		.hamburger-active {
@@ -53,7 +52,7 @@ body {
 			margin-bottom: 1.8em;
 		}
 
-		&__items {
+		&__items-mobile {
 			position: fixed;
 			top: 0;
 			left: -100%;
@@ -66,10 +65,22 @@ body {
 			z-index: 1000;
 		}
 
-		&__item {
+		&__item-mobile {
 			padding: 0.6em;
 			font-size: 2rem;
 			list-style: none;
+			cursor: pointer;
+		}
+
+		&__list-desktop {
+			display: flex;
+			align-items: center;
+			list-style: none;
+		}
+		
+		&__item-desktop {
+			font-size: 1.6rem;
+			padding: .4em .8em;
 			cursor: pointer;
 		}
 
@@ -173,9 +184,25 @@ body {
 			border-radius: 50%;
 		}
 
+		@media (max-width: 768px) {
+			&__list-desktop {
+				display: none;
+			}
+		}
+
 		@media (min-width: 768px) {
+			border-bottom: 1px solid var(--light-gray);
+
 			&__cart-list {
 				left: -280px;
+			}
+
+			&__list-mobile {
+				display: none;
+			}
+
+			&__logo {
+				margin-right: 4em;
 			}
 		}
 	}

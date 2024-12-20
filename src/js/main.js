@@ -1,6 +1,6 @@
 const hamburgerNormalBtn = document.querySelector('.hamburger-normal')
 const hamburgerActiveBtn = document.querySelector('.hamburger-active')
-const menu = document.querySelector('.nav__items')
+const menu = document.querySelector('.nav__items-mobile')
 const sliderContainer = document.querySelector('.main__slider-container')
 const nextBtn = document.querySelector('.main__slider-btn--next')
 const prevBtn = document.querySelector('.main__slider-btn--prev')
