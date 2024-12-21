@@ -26,8 +26,5 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"sass": "^1.49.7"
-	},
-	"dependencies": {
-		"hamburgers": "^1.2.1"
 	}
 }
