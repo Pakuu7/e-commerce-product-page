@@ -12,7 +12,9 @@ html {
 
 :root {
 	--orange-main: #ff7d1a;
+	--orange-main-hover: #fdac6d;
 	--light-gray: #f7f8fd;
+	--dark-hover: #363636;
 }
 
 body {
@@ -77,10 +79,10 @@ body {
 			align-items: center;
 			list-style: none;
 		}
-		
+
 		&__item-desktop {
 			font-size: 1.6rem;
-			padding: .4em .8em;
+			padding: 0.4em 0.8em;
 			cursor: pointer;
 		}
 
@@ -98,6 +100,11 @@ body {
 		&__cart-icon {
 			font-size: 2.8rem;
 			cursor: pointer;
+			transition: color .3s;
+
+			&:hover {
+				color: var(--dark-hover);
+			}
 		}
 
 		&__cart-list {
@@ -208,19 +215,19 @@ body {
 	}
 
 	.main {
-		&__slider {
+		&__slider-mobile {
 			position: relative;
 			width: 100%;
 
 			overflow: hidden;
 		}
 
-		&__slider-container {
+		&__slider-mobile-container {
 			display: flex;
 			transition: transform 0.5s ease-in-out;
 		}
 
-		&__slider-image {
+		&__slider-mobile-image {
 			display: flex;
 			min-width: 100%;
 			height: auto;
@@ -250,6 +257,59 @@ body {
 			&--next {
 				right: 10px;
 			}
+		}
+
+		&__gallery-photos-desktop {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		&__gallery-desktop-container {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		&__gallery-desktop-main-image {
+			width: 400px;
+			border-radius: 12px;
+		}
+
+		&__other-photo {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 2em;
+		}
+
+		&__gallery-desktop-main-image-btn {
+			cursor: pointer;
+			border: none;
+			border-radius: 12px;
+		}
+
+		&__gallery-desktop-image-btn {
+			background: none;
+			width: 80px;
+			height: 80px;
+			border-radius: 8px;
+			border: none;
+			transition: filter 0.3s ease;
+			cursor: pointer;
+
+			&:focus {
+				border: 2px solid var(--orange-main);
+			}
+
+			&:hover {
+				filter: brightness(0.8);
+			}
+		}
+
+		&__gallery-desktop-image {
+			width: 100%;
+			height: 100%;
+			border-radius: 8px;
+			object-fit: cover;
 		}
 
 		.product-details {
@@ -328,14 +388,17 @@ body {
 				font-size: 1.8rem;
 				color: var(--orange-main);
 				cursor: pointer;
+				transition: color .3s;
+
+				&:hover {
+					color: var(--orange-main-hover);
+				}
 
 				&--decrease {
-					margin-left: 1.8em;
 					left: 0;
 				}
 
 				&--increase {
-					margin-right: 1.8em;
 					right: 0;
 				}
 			}
@@ -352,15 +415,26 @@ body {
 				border: none;
 				text-align: center;
 				background-color: var(--light-gray);
-				width: 100%;
 				padding: 1em 0.5em;
+				width: 100%;
 				border-radius: 12px;
 				font-size: 2rem;
-
+			
 				:focus {
 					border: 1px solid var(--orange-main);
 				}
+			
+				&::-webkit-inner-spin-button,
+				&::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			
+				& {
+					-moz-appearance: textfield;
+				}
 			}
+			
 
 			&__add-to-cart {
 				background: none;
@@ -372,9 +446,14 @@ body {
 				background-color: var(--orange-main);
 				border-radius: 12px;
 				cursor: pointer;
+				transition: background-color .3s;
 
 				i {
 					margin-right: 0.6em;
+				}
+
+				&:hover {
+					background-color: var(--orange-main-hover);
 				}
 			}
 			@media (min-width: 996px) {
@@ -406,16 +485,6 @@ body {
 					padding: 20px 10px;
 				}
 
-				&__quantity-btn {
-					&--decrease {
-						margin-left: 0.4em;
-					}
-
-					&--increase {
-						margin-right: 0.4em;
-					}
-				}
-
 				&__brand {
 					margin: 2em 0 0.4em 0;
 				}
@@ -430,7 +499,7 @@ body {
 			}
 		}
 		@media (min-width: 450px) {
-			&__slider {
+			&__slider-mobile {
 				margin-left: auto;
 				margin-right: auto;
 				max-width: 400px;
@@ -438,7 +507,16 @@ body {
 			}
 		}
 
+		@media (max-width: 996px) {
+			&__gallery-desktop {
+				display: none;
+			}
+		}
+
 		@media (min-width: 996px) {
+			&__gallery-mobile {
+				display: none;
+			}
 			&__container {
 				display: flex;
 				padding: 12em 0;
