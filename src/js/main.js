@@ -17,6 +17,7 @@ const cartContainer = document.querySelector('.nav__cart-list-product')
 const cartListInfo = document.querySelector('.nav__cart-list-product-info')
 const desktopOtherImages = document.querySelectorAll('.main__gallery-desktop-image')
 const desktopMainImage = document.querySelector('.main__gallery-desktop-main-image')
+const checkOutBtnContainer = document.querySelector('.nav__cart-checkout-btn-container')
 
 let currentIndex = 0
 let productAmountValue = 0
@@ -56,11 +57,20 @@ addToCartBtn.addEventListener('click', () => {
 		trashIcon.addEventListener('click', () => {
 			cartItem.remove()
 		})
+
 		cartItem.appendChild(trashIcon)
 		cartContainer.appendChild(cartItem)
 
 		if (cartListInfo) {
 			cartListInfo.remove()
+		}
+
+		if (!document.querySelector('.nav__cart-checkout-btn')) {
+			const checkoutBtn = document.createElement('button')
+			checkoutBtn.className = 'nav__cart-checkout-btn'
+			checkoutBtn.innerHTML = 'Checkout'
+
+			checkOutBtnContainer.appendChild(checkoutBtn)
 		}
 	}
 })
