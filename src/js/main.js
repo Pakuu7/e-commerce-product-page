@@ -52,12 +52,13 @@ addToCartBtn.addEventListener('click', () => {
 		`
 		cartItem.appendChild(productInfo)
 
-		const trashIcon = document.createElement('i')
-		trashIcon.className = 'nav__cart-item-icon fa-regular fa-trash-can'
+		const trashIcon = document.createElement('span')
+		trashIcon.className = 'nav__cart-item-icon material-symbols-rounded'
+		trashIcon.innerHTML = 'delete'
 		trashIcon.addEventListener('click', () => {
 			cartItem.remove()
 		})
-
+		
 		cartItem.appendChild(trashIcon)
 		cartContainer.appendChild(cartItem)
 

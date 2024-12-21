@@ -11,7 +11,9 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 			rel="stylesheet" />
-		<script src="https://kit.fontawesome.com/336bb66908.js" crossorigin="anonymous"></script>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 	</head>
 	<body>
 		<div class="wrapper">
@@ -58,19 +60,19 @@
 					<div class="nav__options">
 						<div class="nav__right-side">
 							<div class="nav__cart">
-								<i class="nav__cart-icon fa-solid fa-cart-shopping"></i>
+								<span class="nav__cart-icon material-symbols-rounded"> shopping_cart </span>
 							</div>
 							<div class="nav__cart-list">
 								<div class="nav__cart-list-header">
 									<p class="nav__cart-list-header-title">Cart</p>
-									<i class="nav__cart-list-header-icon fa-solid fa-xmark"></i>
+									<span class="nav__cart-list-header-icon material-symbols-rounded">
+										close
+										</span>
 								</div>
 								<div class="nav__cart-list-product">
 									<p class="nav__cart-list-product-info">Your cart is empty</p>
 								</div>
-								<div class="nav__cart-checkout-btn-container">
-									
-								</div>
+								<div class="nav__cart-checkout-btn-container"></div>
 							</div>
 							<div class="nav__avatar-container">
 								<img src="dist/img/avatar.jpg" class="nav__avatar" alt="Avatar" />
@@ -84,26 +86,67 @@
 					<div class="main__gallery-mobile">
 						<div class="main__slider-mobile">
 							<div class="main__slider-mobile-container">
-								<img src="dist/img/AirForce-1.png" class="main__slider-mobile-image" alt="Side view of Air Force 1 shoe" />
-								<img src="dist/img/AirForce-2.png" class="main__slider-mobile-image" alt="Top view of Air Force 1 shoe" />
-								<img src="dist/img/AirForce-3.png" class="main__slider-mobile-image" alt="Back view of Air Force 1 shoe" />
-								<img src="dist/img/AirForce-4.png" class="main__slider-mobile-image" alt="Bottom view of Air Force 1 shoe" />
+								<img
+									src="dist/img/AirForce-1.png"
+									class="main__slider-mobile-image"
+									alt="Side view of Air Force 1 shoe" />
+								<img
+									src="dist/img/AirForce-2.png"
+									class="main__slider-mobile-image"
+									alt="Top view of Air Force 1 shoe" />
+								<img
+									src="dist/img/AirForce-3.png"
+									class="main__slider-mobile-image"
+									alt="Back view of Air Force 1 shoe" />
+								<img
+									src="dist/img/AirForce-4.png"
+									class="main__slider-mobile-image"
+									alt="Bottom view of Air Force 1 shoe" />
 							</div>
-							<button class="main__slider-btn main__slider-btn--prev"><i class="fa-solid fa-chevron-left"></i></button>
-							<button class="main__slider-btn main__slider-btn--next"><i class="fa-solid fa-chevron-right"></i></button>
+							<button class="main__slider-btn main__slider-btn--prev">
+								<span class="material-symbols-rounded"> chevron_left </span>
+							</button>
+							<button class="main__slider-btn main__slider-btn--next">
+								<span class="material-symbols-rounded"> chevron_right </span>
+							</button>
 						</div>
 					</div>
 					<div class="main__gallery-desktop">
 						<div class="main__gallery-photos-desktop">
 							<div class="main__gallery-desktop-container">
 								<div class="main__main-photo">
-									<button class="main__gallery-desktop-main-image-btn"><img src="dist/img/AirForce-1.png" class="main__gallery-desktop-main-image" alt="Side view of Air Force 1 shoe" /></button>
+									<button class="main__gallery-desktop-main-image-btn">
+										<img
+											src="dist/img/AirForce-1.png"
+											class="main__gallery-desktop-main-image"
+											alt="Side view of Air Force 1 shoe" />
+									</button>
 								</div>
 								<div class="main__other-photo">
-									<button class="main__gallery-desktop-image-btn"><img src="dist/img/AirForce-1.png" class="main__gallery-desktop-image" alt="Side view of Air Force 1 shoe" /></button>
-									<button class="main__gallery-desktop-image-btn"><img src="dist/img/AirForce-2.png" class="main__gallery-desktop-image" alt="Top view of Air Force 1 shoe" /></button>
-									<button class="main__gallery-desktop-image-btn"><img src="dist/img/AirForce-3.png" class="main__gallery-desktop-image" alt="Back view of Air Force 1 shoe" /></button>
-									<button class="main__gallery-desktop-image-btn"><img src="dist/img/AirForce-4.png" class="main__gallery-desktop-image" alt="Bottom view of Air Force 1 shoe" /></button>
+									<button class="main__gallery-desktop-image-btn">
+										<img
+											src="dist/img/AirForce-1.png"
+											class="main__gallery-desktop-image"
+											alt="Side view of Air Force 1 shoe" />
+									</button>
+									<button class="main__gallery-desktop-image-btn">
+										<img
+											src="dist/img/AirForce-2.png"
+											class="main__gallery-desktop-image"
+											alt="Top view of Air Force 1 shoe" />
+									</button>
+									<button class="main__gallery-desktop-image-btn">
+										<img
+											src="dist/img/AirForce-3.png"
+											class="main__gallery-desktop-image"
+											alt="Back view of Air Force 1 shoe" />
+									</button>
+									<button class="main__gallery-desktop-image-btn">
+										<img
+											src="dist/img/AirForce-4.png"
+											class="main__gallery-desktop-image"
+											alt="Bottom view of Air Force 1 shoe" />
+									</button>
 								</div>
 							</div>
 						</div>
@@ -130,15 +173,18 @@
 							<div class="product-details__quantity">
 								<div class="product-details__quantity-value-container">
 									<button class="product-details__quantity-btn product-details__quantity-btn--decrease">
-										<i class="fa-solid fa-minus"></i>
+										<span class="material-symbols-rounded"> remove </span>
 									</button>
 									<input type="number" class="product-details__quantity-value" value="" placeholder="0" />
 									<button class="product-details__quantity-btn product-details__quantity-btn--increase">
-										<i class="fa-solid fa-plus"></i>
+										<span class="material-symbols-rounded"> add </span>
 									</button>
 								</div>
 							</div>
-							<button class="product-details__add-to-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+							<button class="product-details__add-to-cart">
+								<span class="material-symbols-rounded"> shopping_cart </span>
+								<p>Add to Cart</p>
+							</button>
 						</div>
 					</div>
 				</div>
